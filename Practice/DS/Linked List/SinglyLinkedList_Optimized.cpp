@@ -34,17 +34,18 @@ void add(frn** head,int info)
 void deletefrn(frn** head,int n,int flag)
 {
     frn *p=(*head);
-    while(!flag && p && p->next!=NULL)
-    {
-        if(p->popu < p->next->popu)
-            flag=1;
-        p = p->next;
-    }
+//    while(!flag && p && p->next!=NULL)
+//    {
+//        if(p->popu < p->next->popu)
+//            flag=1;
+//        p = p->next;
+//    }
 
     while(n>0 && (*head)!=NULL && (*head)->next!=NULL && (*head)->popu < (*head)->next->popu)
     {
         (*head) = (*head)->next;
         n--;
+        flag = 1;
     }
     frn *q = (*head);
     p = (*head)->next  ;
@@ -55,6 +56,7 @@ void deletefrn(frn** head,int n,int flag)
             p = p->next;
             q->next = p;
             n--;
+            flag = 1;
         }
         else
         {
@@ -62,7 +64,12 @@ void deletefrn(frn** head,int n,int flag)
             p=p->next;
         }
     }
-    if(flag==1 && n>0)
+    if(n>0 && !flag)
+    {
+        q->next = NULL;
+        n--;
+    }
+    if(n>0)
     {
         deletefrn(head,n,0);
     }
@@ -102,7 +109,6 @@ int main()
         deletefrn(&head,m,0);
         arr.push_back(head);
     }
-    cout<<"done";
     for(int i=0;i<n;i++)
     {
         frn* hd = arr[i];

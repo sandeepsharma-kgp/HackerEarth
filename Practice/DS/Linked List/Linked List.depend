@@ -1,0 +1,29 @@
+# depslib dependency file v1.0
+1504287647 source:/home/peace/Desktop/Placoding/HackerEarth/Practice/DS/Linked List/SinglyLinkedList.cpp
+	<iostream>
+	<string>
+	<sstream>
+	<cstdlib>
+	<vector>
+
+1504291512 source:/home/peace/Desktop/Placoding/HackerEarth/Practice/DS/Linked List/SinglyLinkedList_Optimized.cpp
+	<iostream>
+	<string>
+	<sstream>
+	<cstdlib>
+	<vector>
+
+1504321439 source:/home/peace/Desktop/Placoding/HackerEarth/Practice/DS/Linked List/SLL_Opt.cpp
+	<iostream>
+	<string>
+	<sstream>
+	<cstdlib>
+	<vector>
+
+1504333843 source:/home/peace/Desktop/Placoding/HackerEarth/Practice/DS/Linked List/SLL.cpp
+	<iostream>
+	<string>
+	<sstream>
+	<cstdlib>
+	<vector>
+
